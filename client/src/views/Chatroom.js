@@ -17,6 +17,7 @@ export default (props) => {
         <div className="row justify-content-center m-4">
             <div className="col-6 border rounded" style={{height:'400px'}}>
                 <div className="row-col p-2" style={{height: '340px'}}>
+                    {/* Chat messages will appear in this ScrollToBottom div */}
                     <ScrollToBottom className="h-100">
                         {messages.map((msgObject, idx) => 
                             msgObject.sender === "server" ?
@@ -42,6 +43,7 @@ export default (props) => {
                         )}
                     </ScrollToBottom>
                 </div>
+                {/* text input box and send button */}
                 <div className="row" style={{height: '60px'}}>
                     <div className="col pt-2">
                         <input value={newMessage} onChange={ (e) => setNewMessage(e.target.value) } type="text" className="form-control"/>

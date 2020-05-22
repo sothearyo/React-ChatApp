@@ -29,10 +29,6 @@ function App() {
     return () => socket.disconnect(true);
   },[]);
 
-  const clickHandler = (e) => {
-    socket.emit("message_from_client", {"message": "client clicked a button!"});
-  }
-
   return (
     <div className="App">
       <Main/>

@@ -29,15 +29,4 @@ io.on("connection", socket => {
         io.emit("message-from-server", {"msgData": data});
     })
 
-    // sends to just one client
-    // socket.emit("message_from_server", {"key": "value"})
-
-    // sends to all
-    io.emit();
-
-    // sends to all but the client that initiated the contact
-    socket.on("event_from_client", data => {
-        socket.broadcast.emit("send_all_data_to_all_other_clients", data);
-    })
-
 })
